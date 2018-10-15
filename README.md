@@ -1,6 +1,6 @@
 ### Overview
 
-The **yalestats** package (derived from an older version of Chester Ismay's **reedtemplates** package at `ismayc/reedtemplates` with only minor modifications) includes a  [R Markdown](http://rmarkdown.rstudio.com) template for the Yale University Senior Project report. If you'd like to see the PDF document the template produces, it can be found [here]().
+The **yalestats** package (derived from an older version of Chester Ismay's **reedtemplates** package at `ismayc/reedtemplates` with only minor modifications) includes a  [R Markdown](http://rmarkdown.rstudio.com) template for the Yale University Senior Project report. If you'd like to see the PDF document the template produces, it can be found [here](https://github.com/swang87/yalestats/blob/master/inst/rmarkdown/templates/yale_thesis/skeleton/skeleton.pdf).
 
 Under the hood, LaTeX templates are used to ensure that documents conform precisely to submission standards. At the same time, composition and formatting can be done using lightweight [markdown](http://rmarkdown.rstudio.com/authoring_basics.html) syntax, and **R** code and its output can be seamlessly included using [knitr](http://yihui.name/knitr/).
 
