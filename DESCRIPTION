@@ -1,0 +1,11 @@
+Package: yalestats
+Type: Package
+Title: Yale University Senior Project Report Template
+Version: 1.0
+Date: 2018-10-11
+Author: Susan Wang
+Maintainer: Susan Wang <xiaofei.wang@yale.edu>
+Description: This package, based on Chester Ismay's Reed College Thesis template package, contains the Yale University Senior Project Report template.
+License: GPL-3
+Imports:
+    rmarkdown

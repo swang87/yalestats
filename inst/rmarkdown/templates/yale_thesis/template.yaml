@@ -1,0 +1,5 @@
+name: Yale University Senior Project Report
+description: >
+ Template for creating a Yale University Senior Project Report using R Markdown based on the LaTeX template.
+create_dir: true
+
