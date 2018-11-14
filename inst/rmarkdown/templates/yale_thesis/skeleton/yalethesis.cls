@@ -3,9 +3,9 @@
 % as my name is not removed and the modifier adds his name to the file.
 % Redistribution permitted.
 %
-% 27 Jan 2004	Sam Noble	Removed tocbibind dependency.
-% 04 Dec 2001 	Sam Noble	Class file
-% 03 Sep 1995	David Perkinson	Title Page
+% 27 Jan 2004 Sam Noble Removed tocbibind dependency.
+% 04 Dec 2001   Sam Noble Class file
+% 03 Sep 1995 David Perkinson Title Page
 % Acknowledgements Page, David Perkinson & Sam Noble
 % May 2005 Patrick Carlisle Table of contents chapter definition
 % 2004-2005 Ben Salzberg (BTS) a variety of tweaks here and in the template
@@ -108,12 +108,12 @@
   \fancyhead[LE,RO]{\thepage}
 %  \fancyhead[RE]{\slshape \leftmark}
 %  \fancyhead[LO]{\slshape \rightmark}
-%	The above makes your headers in all caps. If you would like different headers, choose one of the following options (be sure to remove the % symbol from both the right and left headers):
-	 \fancyhead[RE]{\slshape \nouppercase \leftmark} % This makes the headers on the RIGHT side pages be italic and use lowercase With Capitals When Specified.
-	\fancyhead[LO]{\slshape \nouppercase \rightmark} % This does the same thing to the LEFT side pages
-%	or
-%	\fancyhead[RE]{\scshape \leftmark} % The RIGHT headers will be in small caps.
-%	\fancyhead[LO]{\scshape \rightmark} %  And so will the LEFT headers
+% The above makes your headers in all caps. If you would like different headers, choose one of the following options (be sure to remove the % symbol from both the right and left headers):
+   \fancyhead[RE]{\slshape \nouppercase \leftmark} % This makes the headers on the RIGHT side pages be italic and use lowercase With Capitals When Specified.
+  \fancyhead[LO]{\slshape \nouppercase \rightmark} % This does the same thing to the LEFT side pages
+% or
+% \fancyhead[RE]{\scshape \leftmark} % The RIGHT headers will be in small caps.
+% \fancyhead[LO]{\scshape \rightmark} %  And so will the LEFT headers
   \pagestyle{fancy}
 
 % Psych majors: You do not need the following six lines, as it conflicts with apacite, so comment them out.
@@ -138,11 +138,11 @@
 % Stolen from book.cls and modified
 \let\RToldchapter\chapter
 \renewcommand{\chapter}{\if@openright\RTcleardoublepage
-		    \else\clearpage\fi
-		    \thispagestyle{empty}%
-		    \global\@topnum\z@
-		    \@afterindentfalse
-		    \secdef\@chapter\@schapter}
+        \else\clearpage\fi
+        \thispagestyle{empty}%
+        \global\@topnum\z@
+        \@afterindentfalse
+        \secdef\@chapter\@schapter}
 
 % Stolen from book.cls PBC 5/12/05
 % Using this to actually show "Chapter 1" in TOC instead of "1"
@@ -169,9 +169,9 @@
                     \fi}
 
 \newcommand{\RTcleardoublepage}{
-	\clearpage\if@twoside \ifodd\c@page\else
-	\thispagestyle{empty}\hbox{}\newpage
-	\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+  \clearpage\if@twoside \ifodd\c@page\else
+  \thispagestyle{empty}\hbox{}\newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \let\RToldcleardoublepage\cleardoublepage
 \renewcommand{\cleardoublepage}{\RTcleardoublepage}
@@ -196,12 +196,12 @@
 %\addtolength\textheight{\headheight}
 %\addtolength\textheight{\headsep}
 
-%\def\division#1{\gdef \@division{#1}}
-%\def\@division{\@latex@warning@no@line{No \noexpand\division given}}
+\def\division#1{\gdef \@division{#1}}
+\def\@division{\@latex@warning@no@line{No \noexpand\division given}}
 \def\department#1{\gdef \@department{#1}}
 \def\@department{\@latex@warning@no@line{No \noexpand\department given}}
-%\def\thefaculty#1{\gdef \@thefaculty{#1}}
-%\def\@thefaculty{The Statistics Faculty}
+\def\thefaculty#1{\gdef \@thefaculty{#1}}
+\def\@thefaculty{The Faculty}
 \def\advisor#1{\gdef \@advisor{#1}}
 \def\@advisor{\@latex@warning@no@line{No \noexpand\advisor given}}
 \def\altadvisor#1{\gdef \@altadvisor{#1} \@altadvisortrue}
@@ -274,7 +274,7 @@
   \AtBeginDvi{\special{!\RTpercent Yale University LaTeX Report Class 2001/12/04 SN}}
   \AtBeginDvi{\special{rawpostscript \RTpercent Yale University LaTeX Report Class 2001/12/04 SN}}
 \else
-  \AtEndDocument{\pdfinfo{/Creator	(Yale University LaTeX Report Class 2001/12/04 SN)}}
+  \AtEndDocument{\pdfinfo{/Creator  (Yale University LaTeX Report Class 2001/12/04 SN)}}
 \fi
 
 % I hacked the title page to all be the same font size
@@ -299,10 +299,9 @@
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
-    A Senior Thesis\\
+    A Senior Project Report\\
     Presented to \\
-    %\@thefaculty \\
-    The Faculty
+    \@thefaculty
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
     \vfil
@@ -310,7 +309,7 @@
     of the Requirements for the Degree \\
     Bachelor of Arts\\
     in\\
-    Statistics \& Data Science\\
+    \@department \\
     Yale University
     \vfil
     \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
@@ -331,15 +330,15 @@
 %   {\fontsize{12}{14}
 %   \setbox0=\hbox{Approved for the \@approvedforthe}
 %   \thispagestyle{empty}
-%   \null\vfil		% just below center of page
-%   \par\vskip 6cm	% below center, not center
-%   \centerline{\copy0}	% approved
+%   \null\vfil    % just below center of page
+%   \par\vskip 6cm  % below center, not center
+%   \centerline{\copy0} % approved
 %   \centerline{(\@department)} %major
-%   \vskip 1cm		%space to sign
+%   \vskip 1cm    %space to sign
 %   \centerline{\makebox[\wd0][c]{\hrulefill}
-% 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
+%   \if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
 %   \centerline{\makebox[\wd0][c]{\@advisor}
-% 	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
+%   \if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
 %   \par\vfil\null}
 %   \cleardoublepage
   }
