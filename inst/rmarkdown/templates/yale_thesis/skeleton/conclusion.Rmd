@@ -3,6 +3,7 @@ output: pdf_document
 ---
 
 # Conclusion {.unnumbered}
+  \markboth{Conclusion}{Conclusion}
   \setcounter{chapter}{4}
 	\setcounter{section}{0}
 
